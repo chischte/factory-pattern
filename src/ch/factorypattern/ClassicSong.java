@@ -1,12 +1,12 @@
 package ch.factorypattern;
 
-public class PCComputer extends AbstractComputer {
+public class ClassicSong extends AbstractSong {
 
 	private String ram;
 	private String hdd;
 	private String cpu;
 
-	public PCComputer(final String ram, final String hdd, final String cpu) {
+	public ClassicSong(String ram, String hdd, String cpu) {
 		this.ram = ram;
 		this.hdd = hdd;
 		this.cpu = cpu;
@@ -14,12 +14,8 @@ public class PCComputer extends AbstractComputer {
 
 	@Override
 	public void playSong(){
-
+		System.out.println("tadadadada ...this is a pop song" );
 	}
 
-	@Override
-	public void showInterpret(){
-
-	}
 
 }

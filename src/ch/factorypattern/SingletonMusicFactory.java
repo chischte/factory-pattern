@@ -1,8 +1,8 @@
 package ch.factorypattern;
 
-import ch.factorypattern.AbstractComputer;
-import ch.factorypattern.PCComputer;
-import ch.factorypattern.ServerComputer;
+import ch.factorypattern.AbstractSong;
+import ch.factorypattern.PopSong;
+import ch.factorypattern.ClassicSong;
 
 public class SingletonMusicFactory {
 
@@ -26,12 +26,12 @@ public class SingletonMusicFactory {
 	/**
 	 * Creates an object
 	 */	
-	public AbstractComputer getComputer(String type, String ram, String hdd,
+	public AbstractSong getComputer(String type, String ram, String hdd,
 			 String cpu) {
 		if ("Classic".equalsIgnoreCase(type))
-			return new PCComputer(ram, hdd, cpu);
+			return new PopSong(ram, hdd, cpu);
 		else if ("Pop".equalsIgnoreCase(type))
-			return new ServerComputer(ram, hdd, cpu);
+			return new ClassicSong(ram, hdd, cpu);
 
 		return null;
 	}

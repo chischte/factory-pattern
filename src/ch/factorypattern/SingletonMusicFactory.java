@@ -26,12 +26,11 @@ public class SingletonMusicFactory {
 	/**
 	 * Creates an object
 	 */	
-	public AbstractSong getComputer(String type, String ram, String hdd,
-			 String cpu) {
+	public AbstractSong getComputer(String type, String title, String interpret) {
 		if ("Classic".equalsIgnoreCase(type))
-			return new PopSong(ram, hdd, cpu);
+			return new ClassicSong(title, interpret);
 		else if ("Pop".equalsIgnoreCase(type))
-			return new ClassicSong(ram, hdd, cpu);
+			return new PopSong(title, interpret);
 
 		return null;
 	}

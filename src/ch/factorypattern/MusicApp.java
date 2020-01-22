@@ -10,10 +10,12 @@ public class MusicApp {
 
 	public static void main(final String[] args) {
 		SingletonMusicFactory computerFactory = SingletonMusicFactory.getInstance();
-		AbstractSong pc = computerFactory.getComputer("Classic", "2 GB", "500 GB", "2.4 GHz");
-		AbstractSong server = computerFactory.getComputer("Pop", "16 GB", "1 TB", "2.9 GHz");
-		pc.playSong();
-		server.playSong();
+		AbstractSong aClassicSong = computerFactory.getComputer("Classic", "Symphony No.9", "Bach");
+		AbstractSong aPopSong = computerFactory.getComputer("Pop", "Toxic", "Britney Spears");
+		AbstractSong anotherPopSong = computerFactory.getComputer("Pop", "Another Day", "Phil Collins");
+		aClassicSong.playSong();
+		aPopSong.playSong();
+		anotherPopSong.playSong();
 		
 	}
 }

@@ -12,7 +12,8 @@ public class PopSong extends AbstractSong {
 
 	@Override
 	public void playSong(){
-		System.out.print("lalalalala ...this is a pop song by " );
+		System.out.print("lalalalala ...this is a pop song called " );
+		System.out.print(title + " by ");
 		System.out.println(interpret);
 
 	}

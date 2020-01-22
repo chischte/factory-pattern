@@ -16,7 +16,8 @@ public class MusicApp {
 		aClassicSong.playSong();
 		aPopSong.playSong();
 		anotherPopSong.playSong();
-		aPopSong.setChartPlacement(82);
+		aPopSong.setChartPlacement(22);
+		System.out.print("...it is currently on chart number: ");
 		System.out.println(aPopSong.getChartPlacement());
 	}
 }

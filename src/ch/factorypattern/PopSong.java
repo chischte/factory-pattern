@@ -8,14 +8,15 @@ public class PopSong extends AbstractSong {
 	public PopSong(String title, String interpret) {
 		this.title = title;
 		this.interpret = interpret;
-			}
+	}
 
 	@Override
-	public void playSong(){
-		System.out.print("lalalalala ...this is a pop song called " );
-		System.out.print(title + " by ");
-		System.out.println(interpret);
-
+	public String getTitle() {
+		return title;
+	}
+	@Override 
+	public String getInterpret() {
+		return interpret;
 	}
 
 

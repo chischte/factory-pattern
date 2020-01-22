@@ -9,15 +9,14 @@ package ch.factorypattern;
 public class MusicApp {
 
 	public static void main(final String[] args) {
-		MusicFactory computerFactory = MusicFactory.getInstance();
-		AbstractSong aClassicSong = computerFactory.getComputer("Classic", "Symphony No.9", "Bach");
-		AbstractSong aPopSong = computerFactory.getComputer("Pop", "Toxic", "Britney Spears");
-		AbstractSong anotherPopSong = computerFactory.getComputer("Pop", "Another Day", "Phil Collins");
-		aClassicSong.playSong();
-		aPopSong.playSong();
-		anotherPopSong.playSong();
+		MusicFactory musicFactory = MusicFactory.getInstance();
+		AbstractSong aClassicSong = musicFactory.getSong("Classic", "Symphony No.9", "Bach");
+		AbstractSong aPopSong = musicFactory.getSong("Pop", "Toxic", "Britney Spears");
+		AbstractSong anotherPopSong = musicFactory.getSong("Pop", "Another Day", "Phil Collins");
+		System.out.println(aPopSong.getInterpret());
+		System.out.println(anotherPopSong.getTitle());
+		System.out.println(aClassicSong.getTitle());
 		aPopSong.setChartPlacement(22);
-		System.out.print("...it is currently on chart number: ");
 		System.out.println(aPopSong.getChartPlacement());
 	}
 }

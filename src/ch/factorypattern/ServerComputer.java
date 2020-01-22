@@ -12,19 +12,15 @@ public class ServerComputer extends AbstractComputer {
 		this.cpu = cpu;
 	}
 
+
 	@Override
-	public String getRAM() {
-		return this.ram;
+	public void playSong(){
+		System.out.println("tadadadada ...this is a pop song" );
 	}
 
 	@Override
-	public String getHDD() {
-		return this.hdd;
-	}
+	public void showInterpret(){
 
-	@Override
-	public String getCPU() {
-		return this.cpu;
 	}
 
 }

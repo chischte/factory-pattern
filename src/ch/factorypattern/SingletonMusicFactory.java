@@ -4,20 +4,20 @@ import ch.factorypattern.AbstractComputer;
 import ch.factorypattern.PCComputer;
 import ch.factorypattern.ServerComputer;
 
-public class SingletonComputerFactory {
+public class SingletonMusicFactory {
 
 	/**
 	 * The singleton instance
 	 */
 
-	private static SingletonComputerFactory theInstance = null;
+	private static SingletonMusicFactory theInstance = null;
 	
 	//private SingletonComputerFactory(){		
 	//}
 	
-	public static SingletonComputerFactory getInstance(){		
+	public static SingletonMusicFactory getInstance(){		
 		if(theInstance == null){
-			theInstance = new SingletonComputerFactory();
+			theInstance = new SingletonMusicFactory();
 		}
 		
 		return theInstance;
@@ -28,9 +28,9 @@ public class SingletonComputerFactory {
 	 */	
 	public AbstractComputer getComputer(String type, String ram, String hdd,
 			 String cpu) {
-		if ("PC".equalsIgnoreCase(type))
+		if ("Classic".equalsIgnoreCase(type))
 			return new PCComputer(ram, hdd, cpu);
-		else if ("Server".equalsIgnoreCase(type))
+		else if ("Pop".equalsIgnoreCase(type))
 			return new ServerComputer(ram, hdd, cpu);
 
 		return null;

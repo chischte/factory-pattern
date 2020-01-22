@@ -13,18 +13,13 @@ public class PCComputer extends AbstractComputer {
 	}
 
 	@Override
-	public String getRAM() {
-		return this.ram;
+	public void playSong(){
+
 	}
 
 	@Override
-	public String getHDD() {
-		return this.hdd;
-	}
+	public void showInterpret(){
 
-	@Override
-	public String getCPU() {
-		return this.cpu;
 	}
 
 }

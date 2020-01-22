@@ -3,12 +3,9 @@ package ch.factorypattern;
 //
 public abstract class AbstractComputer implements InterfaceComputer{
 	
-	public abstract String getRAM();
-	public abstract String getHDD();
-	public abstract String getCPU();
+	// interface methods to be implemented
+	// listed for information only
+	public abstract void playSong();
+	public abstract void showInterpret();
 	
-	@Override
-	public String toString(){
-		return "RAM= "+this.getRAM()+", HDD="+this.getHDD()+", CPU="+this.getCPU();
-	}
 }

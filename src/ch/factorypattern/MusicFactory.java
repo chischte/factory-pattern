@@ -1,31 +1,31 @@
 package ch.factorypattern;
-
+// import statements in this case optional:
 import ch.factorypattern.AbstractSong;
 import ch.factorypattern.PopSong;
 import ch.factorypattern.ClassicSong;
 
-public class SingletonMusicFactory {
+public class MusicFactory {
 
 	/**
 	 * The singleton instance
 	 */
 
-	private static SingletonMusicFactory theInstance = null;
+	private static MusicFactory theInstance = null;
 	
-	//private SingletonComputerFactory(){		
-	//}
+	// Private Constructor
+	// will prevent the instantiation of this class directly
+	private MusicFactory() {
+	}
 	
-	public static SingletonMusicFactory getInstance(){		
+	public static MusicFactory getInstance(){		
 		if(theInstance == null){
-			theInstance = new SingletonMusicFactory();
+			theInstance = new MusicFactory();
 		}
-		
 		return theInstance;
 	}
 		 
-	/**
-	 * Creates an object
-	 */	
+	// Creates objects:
+	
 	public AbstractSong getComputer(String type, String title, String interpret) {
 		if ("Classic".equalsIgnoreCase(type))
 			return new ClassicSong(title, interpret);
